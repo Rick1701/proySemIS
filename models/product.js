@@ -17,10 +17,11 @@ const ProductSchema = new Schema({
         type: String,
         required: true
     },
-    /*category:{
+    category:{
         type: Schema.ObjectId,
         ref: 'Category'
-    },
+    }
+    /*
     status:{
         type: Schema.ObjectId,
         ref: 'status'
