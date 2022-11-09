@@ -3,7 +3,19 @@ const mongoose = require('mongoose'); //constante de nombre mongoose que importa
 const cors = require('cors'); //constante de nombre cors que importará la librería de seguridad cors
 require('dotenv').config();
 
+
 const app = express();
+
+//RUTA DEFINIDA
+const productRoutes = require('./routes/productRoutes');
+//PARA UTILIZAR LA RUTA INGRESO:
+app.use(cors());
+app.use(express.json());
+app.options('*', cors());
+//REINGRESO /api Y LAS RUTAS QUE SE GENERAN
+app.use('/api', productRoutes)
+
+
 //app.listen(3000, () => console.log('Server started'));
 /*app.listen(3000, () => {
     for(let i=0; i<10; i++)

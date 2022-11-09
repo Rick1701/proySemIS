@@ -14,11 +14,11 @@
         },
         "description":"String",
         "category":{
-            "type":"Schema.ObjectID",
+            "type":"Schema.ObjectId",
             "ref":"Category"
         },
         "status":{
-            "type":"Schema.ObjectID",
+            "type":"Schema.ObjectId",
             "ref":"Status"
         }
     },
@@ -65,7 +65,7 @@
             "default":"user"
         },
         "cart":{
-            "type":"Schema.ObjectID",
+            "type":"Schema.ObjectId",
             "ref": "Cart"
         }
     },
@@ -73,7 +73,7 @@
     "cart": {
         "products":{
             "type": [
-                "Schema.ObjectID"
+                "Schema.ObjectId"
             ],
             "ref": "Product"
         }
