@@ -6,14 +6,18 @@ require('dotenv').config();
 
 const app = express();
 
-//RUTA DEFINIDA
+//RUTAS DEFINIDA
 const productRoutes = require('./routes/productRoutes');
+const categoryRoutes = require('./routes/categoryRoutes')
+
 //PARA UTILIZAR LA RUTA INGRESO:
 app.use(cors());
 app.use(express.json());
 app.options('*', cors());
+
 //REINGRESO /api Y LAS RUTAS QUE SE GENERAN
 app.use('/api', productRoutes)
+app.use('/api', categoryRoutes)
 
 
 //app.listen(3000, () => console.log('Server started'));
